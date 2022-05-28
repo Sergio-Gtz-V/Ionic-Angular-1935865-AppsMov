@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title color="dark" mode="md">
-      Checodagoatnocap
+      ChecoDaGoatNoCap
       <ion-icon name="chevron-down-outline"></ion-icon>
     </ion-title>
     <ion-buttons slot="end">      
@@ -110,27 +110,17 @@
       <div *ngFor="let item of posts; let i = index">
         
         <ion-grid *ngIf="i%3 == 0" class="noPadding">
-          <ion-row *ngIf="i%9 == 0">
-            <ion-col size="8">
-              <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
-            </ion-col>
-            <ion-col size="4">
-              <div *ngIf="posts[i + 1]" class="image-container ct1" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
-              <div *ngIf="posts[i + 2]" class="image-container ct2" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
-            </ion-col>
-          </ion-row>
-
-          <ion-row *ngIf="i%9 > 2">
+          <ion-row >
             <ion-col size="4">
               <div class="image-container" [style.background-image]="'url(' + item?.url + ')'"></div>
             </ion-col>
             <ion-col size="4">
-              <div *ngIf="posts[i + 1]" class="image-container" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
+              <div class="image-container" [style.background-image]="'url(' + posts[i + 1]?.url + ')'"></div>
             </ion-col>
             <ion-col size="4">
-              <div *ngIf="posts[i + 2]" class="image-container" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
+              <div class="image-container" [style.background-image]="'url(' + posts[i + 2]?.url + ')'"></div>
             </ion-col>
-          </ion-row>
+          </ion-row> 
 
         </ion-grid>
       </div>
@@ -139,7 +129,7 @@
       <div *ngFor="let item of posts; let i = index">
         <ion-card>
           <ion-card-header>
-            <ion-label>Un Post Normal</ion-label>
+            <ion-label> Post </ion-label>
           </ion-card-header>
           <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
         </ion-card>

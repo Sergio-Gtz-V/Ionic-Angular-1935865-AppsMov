@@ -18,10 +18,10 @@ ion-content {
                     position: relative;
                     min-width: 4rem;
                     min-height: 4rem;
-                    border-radius: 20px;
+                    border-radius: 50px;
                     padding: 5px;
                     img {
-                        border-radius: 20px;
+                        border-radius: 50px;
                     }
                 }
                 ion-thumbnail::before {
@@ -31,7 +31,7 @@ ion-content {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    border-radius: 40px;
+                    border-radius: 50px;
                     padding: 3px;
                     background: linear-gradient(to bottom, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
                     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -75,7 +75,7 @@ ion-content {
                         ion-thumbnail {
                             min-width: 3rem;
                             min-height: 3rem;
-                            border-radius: 20px;
+                            border-radius: 50px;
                             margin: 0;
                             border: 1px solid var(--ion-color-light);
                             ion-icon {
@@ -83,7 +83,7 @@ ion-content {
                                 font-size: 1.6rem;
                             }
                             img {
-                                border-radius: 20px;
+                                border-radius: 50px;
                             }
                         }                        
                         p {
