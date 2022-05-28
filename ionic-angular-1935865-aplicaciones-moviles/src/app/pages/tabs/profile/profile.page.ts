@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import SwiperCore, {Autoplay, Keyboard, Pagination, Scrollbar, Zoom} from 'swiper';
+
+SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom])
 
 @Component({
   selector: 'app-profile',
@@ -38,16 +41,16 @@ export class ProfilePage implements OnInit {
     this.posts = [
       { id: 1, url: 'assets/imgs/posts/1.jpg'},
       { id: 2, url: 'assets/imgs/posts/2.jpg'},
-      { id: 3, url: 'assets/imgs/posts/3.png'},
-      { id: 4, url: 'assets/imgs/posts/4.png'},
-      { id: 9, url: 'assets/imgs/posts/5.jpg'},
-      { id: 6, url: 'assets/imgs/posts/6.png'},
-      { id: 5, url: 'assets/imgs/posts/7.png'},
+      { id: 3, url: 'assets/imgs/posts/3.jpg'},
+      { id: 4, url: 'assets/imgs/posts/4.jpg'},
+      { id: 5, url: 'assets/imgs/posts/5.jpg'},
+      { id: 6, url: 'assets/imgs/posts/6.jpg'},
+      { id: 7, url: 'assets/imgs/posts/7.jpg'},
       { id: 8, url: 'assets/imgs/posts/8.jpg'},
-      { id: 7, url: 'assets/imgs/posts/9.png'},
-      { id: 10, url: 'assets/imgs/posts/10.png'},
-      { id: 11, url: 'assets/imgs/posts/11.png'},
-      { id: 12, url: 'assets/imgs/posts/12.png'},
+      { id: 9, url: 'assets/imgs/posts/9.jpg'},
+      { id: 10, url: 'assets/imgs/posts/10.jpg'},
+      { id: 11, url: 'assets/imgs/posts/11.jpg'},
+      { id: 12, url: 'assets/imgs/posts/12.jpg'}
     ];
   }
 
