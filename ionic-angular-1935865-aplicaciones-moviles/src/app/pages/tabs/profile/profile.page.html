@@ -6,9 +6,6 @@
     </ion-title>
     <ion-buttons slot="end">      
       <ion-button fill="clear" color="dark">
-        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
-      </ion-button>
-      <ion-button fill="clear" color="dark">
         <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -98,7 +95,7 @@
           </ion-col>
         </ion-slide>
       </ion-slides>
-    </ion-row> 
+    </ion-row> <!--GRID VIEW, REELS, TAGS-->
     <ion-row class="images" (ionChange)="buttonsChanged($event)">
       <ion-segment mode="md" [value]="buttonValue">
         <ion-segment-button [value]="item?.value" *ngFor="let item of buttonItems">
@@ -109,7 +106,7 @@
   </ion-grid>
 
   <div [ngSwitch]="buttonValue">
-    <ion-list lines="none" *ngSwitchCase="'grid'" class="photo-grid">
+    <ion-list lines="none" *ngSwitchCase="'grid'" class="photo-grid"> <!--Grid Post-->
       <div *ngFor="let item of posts; let i = index">
         
         <ion-grid *ngIf="i%3 == 0" class="noPadding">
@@ -138,6 +135,19 @@
         </ion-grid>
       </div>
     </ion-list>
+    <ion-list lines="none" *ngSwitchCase="'photos'" class="photo-list"> <!--Post Individual-->
+      <div *ngFor="let item of posts; let i = index">
+        <ion-card>
+          <ion-card-header>
+            <ion-label>Un Post Normal</ion-label>
+          </ion-card-header>
+          <div class="image-container image-container1" [style.background-image]="'url(' + item?.url + ')'"></div>
+        </ion-card>
+      </div>
+    </ion-list>
+    <ion-list lines="none" *ngSwitchCase="'tags'" class="text"> <!--Tags-->
+      <p>The person is not tagged in any photos</p>
+    </ion-list>
+    
   </div>
-
 </ion-content>

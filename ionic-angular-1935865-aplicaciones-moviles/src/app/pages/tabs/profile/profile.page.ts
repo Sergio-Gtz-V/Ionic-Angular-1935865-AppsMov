@@ -34,9 +34,9 @@ export class ProfilePage implements OnInit {
       slideShadows: true
     };
     this.buttonItems = [
-      {value: 'grid', icon: 'grid'},
-      {value: 'reels', icon: 'film'},
-      {value: 'photos', icon: 'images'},
+      {value: 'grid', icon: 'apps'},
+      {value: 'photos', icon: 'albums'},
+      {value: 'tags', icon: 'pricetag'},
     ];
     this.posts = [
       { id: 1, url: 'assets/imgs/posts/1.jpg'},
