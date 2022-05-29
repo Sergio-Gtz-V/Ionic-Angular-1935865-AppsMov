@@ -1,10 +1,8 @@
 import { Component, Input , Output, EventEmitter, OnChanges, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ActionSheetController } from '@ionic/angular';
-import { HttpClient } from '@angular/common/http';
-import { Location, registerLocaleData } from '@angular/common';
 import { getDatabase, onValue, ref, remove, set, update } from 'firebase/database';
-import { Database } from '@angular/fire/database';
+//import { Database } from '@angular/fire/database';
 import { NgForm } from '@angular/forms';
 
 
@@ -26,6 +24,4 @@ export class HomePage implements OnInit {
   ngOnInit() {
     const db = getDatabase();
   }
-
- 
 }
