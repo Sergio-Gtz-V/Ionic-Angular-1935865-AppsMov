@@ -10,13 +10,19 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { FirebaseError, initializeApp } from 'firebase/app';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
+import {AngularFireModule} from '@angular/fire/compat'
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule,
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideDatabase(() => getDatabase())],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    FormsModule, 
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig) 
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

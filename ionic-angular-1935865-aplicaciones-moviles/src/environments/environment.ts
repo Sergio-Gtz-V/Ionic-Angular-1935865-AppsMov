@@ -4,7 +4,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 export const environment = {
-  production: true,
+  production: false,
 
   firebaseConfig: {
     apiKey: "AIzaSyDxfAmCME6pRK2JfrGHBuj07N6jNX7wWBc",
