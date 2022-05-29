@@ -8,8 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 //import { FirebaseError, initializeApp} from 'firebase/app';
 import { environment } from 'src/environments/environment';
-//import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
-//import { provideStorage, getStorage } from '@angular/fire/storage';
+//import {initializeApp, provideFirebaseApp} from '@angular/fire/app;
+
 
 
 @NgModule({
