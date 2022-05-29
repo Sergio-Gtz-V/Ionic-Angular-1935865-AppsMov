@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { getDatabase } from 'firebase/database';
 import SwiperCore, {Autoplay, Keyboard, Pagination, Scrollbar, Zoom} from 'swiper';
 
 SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom])
@@ -18,7 +19,9 @@ export class ProfilePage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    const db = getDatabase();
+    
     this.stories = [
       { name: 'New' },
       { name: 'Android', src: 'assets/imgs/circles/android.png' },
